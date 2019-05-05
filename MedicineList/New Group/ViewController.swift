@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   var medList = [Medicine]()
   var currentMedList = [Medicine]()
+  var groupList = [[String:String]]()
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -46,11 +47,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       let listWrapper = try! JSONDecoder().decode(Data.self, from: data)
       self.medList = listWrapper.medicines
       self.currentMedList = self.medList
+      self.groupList = listWrapper.medicineGroup!
       DispatchQueue.main.async {
         self.tableView.reloadData()
         //self.currentMedList = self.medList
       }
       print(self.medList.count)
+      print(self.groupList)
       }
     task.resume()
   }
@@ -64,8 +67,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "MedicineCell", for: indexPath) as? MedicineCell else {return UITableViewCell()}
-    let medicineForRow = self.medList[indexPath.row]
+    let medicineForRow = self.currentMedList[indexPath.row]
     cell.medicine = medicineForRow
+    cell.medGroup.text = self.groupList[0]["\(medicineForRow.medicine_group!)"]
     //self.cell.medName?.text = medicineForRow.medicine_name!
     //self.cell.medATC?.text = medicineForRow.atc!
     return cell

@@ -21,7 +21,7 @@ class MedicineCell: UITableViewCell {
   var medicine: Medicine? 
     {
     didSet {
-      //medGroup.text = String(medicine!.medicine_group)
+    
       medName?.text = medicine?.medicine_name
       medATC?.text = medicine?.atc
       //print(medicine?.medicine_name as Any)

@@ -11,7 +11,7 @@ import Foundation
 struct Data: Decodable{
   
 	let version : Int?
-  //let medicineGroup: [String: String]?
+  let medicineGroup: [[String:String]]?
 	let medicines : [Medicine]
 
 	enum CodingKeys: String, CodingKey {
@@ -24,7 +24,7 @@ struct Data: Decodable{
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		version = try values.decodeIfPresent(Int.self, forKey: .version)
-    //medicineGroup = try values.decode([medicineGroup].self, forKey: .medicineGroup)
+    medicineGroup = try values.decodeIfPresent([[String:String]].self, forKey: .medicineGroup)
     medicines = try (values.decodeIfPresent([Medicine].self, forKey: .medicine))!
 	}
 }
