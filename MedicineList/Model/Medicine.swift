@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Medicine : Codable {
+struct Medicine : Decodable {
 	let medicine_name : String?
 	let total_pills_in_sheet : Int?
 	let medicine_group : Int?

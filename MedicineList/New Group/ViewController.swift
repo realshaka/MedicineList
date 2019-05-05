@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-
+    tableView.dataSource = self
+    tableView.delegate = self
     let url = URL(string: "https://connect.popit.io/download.php?filetype=medlist") 
     
     let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -35,8 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       print(self.medList.count)
       }
     task.resume()
-    self.tableView.delegate = self
-    self.tableView.dataSource = self 
+
   }
   
 
@@ -48,8 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "MedicineCell", for: indexPath) as? MedicineCell else {return UITableViewCell()}
     let medicineForRow = self.medList[indexPath.row]
     cell.medicine = medicineForRow
-    cell.medName?.text = medicineForRow.medicine_name
-    cell.medATC?.text = medicineForRow.atc
+    //self.cell.medName?.text = medicineForRow.medicine_name!
+    //self.cell.medATC?.text = medicineForRow.atc!
     return cell
   }
   

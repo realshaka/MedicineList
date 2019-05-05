@@ -19,83 +19,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="f38-4V-fJv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ItA-4C-FfP">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="15" y="91" width="360" height="576"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicineCell" rowHeight="120" id="yGX-ez-ej4" customClass="MedicineCell" customModule="MedicineList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="360" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yGX-ez-ej4" id="fdf-cT-tzI" customClass="MedicineCell" customModule="MedicineList" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VyK-lt-8RA">
-                                                    <rect key="frame" x="15" y="11" width="360" height="98"/>
+                                                    <rect key="frame" x="30" y="11" width="330" height="98"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-11-Qvz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="360" height="27.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-11-Qvz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-yD-dTu">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="27.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-2Q-vx6">
-                                                                    <rect key="frame" x="180" y="0.0" width="180" height="27.5"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="Medname">
-                                                                            <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="18"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-2Q-vx6">
+                                                                    <rect key="frame" x="165" y="0.0" width="165" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                                    <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hdZ-Xa-DYs">
-                                                            <rect key="frame" x="0.0" y="35.5" width="360" height="27"/>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hdZ-Xa-DYs">
+                                                            <rect key="frame" x="0.0" y="35.5" width="330" height="27"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX5-dk-0yX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="27"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="27"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRf-5y-eGb">
-                                                                    <rect key="frame" x="180" y="0.0" width="180" height="27"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="MedGroup">
-                                                                            <attributes>
-                                                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedGroup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DRf-5y-eGb">
+                                                                    <rect key="frame" x="165" y="0.0" width="165" height="27"/>
+                                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                    <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-mW-2oo">
-                                                            <rect key="frame" x="0.0" y="70.5" width="360" height="27.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-mW-2oo">
+                                                            <rect key="frame" x="0.0" y="70.5" width="330" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-L2-dnK">
-                                                                    <rect key="frame" x="0.0" y="3.5" width="180" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="3.5" width="165" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAf-aT-vvD">
-                                                                    <rect key="frame" x="180" y="3.5" width="180" height="20.5"/>
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="MedATC">
-                                                                            <attributes>
-                                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedATC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qAf-aT-vvD">
+                                                                    <rect key="frame" x="165" y="5.5" width="165" height="17"/>
+                                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                    <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -106,8 +94,8 @@
                                             <constraints>
                                                 <constraint firstItem="VyK-lt-8RA" firstAttribute="top" secondItem="fdf-cT-tzI" secondAttribute="topMargin" id="0g2-MZ-Zbk"/>
                                                 <constraint firstAttribute="trailing" secondItem="VyK-lt-8RA" secondAttribute="trailing" id="Bkw-2s-2RG"/>
+                                                <constraint firstItem="VyK-lt-8RA" firstAttribute="leading" secondItem="fdf-cT-tzI" secondAttribute="leading" constant="30" id="Egk-5n-jLa"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="VyK-lt-8RA" secondAttribute="bottom" id="LrJ-gm-bKA"/>
-                                                <constraint firstItem="VyK-lt-8RA" firstAttribute="leading" secondItem="fdf-cT-tzI" secondAttribute="leadingMargin" id="Mw3-En-Nq6"/>
                                             </constraints>
                                             <connections>
                                                 <outlet property="medATC" destination="qAf-aT-vvD" id="QDi-aH-1U1"/>
@@ -126,9 +114,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ItA-4C-FfP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3El-7z-E5y"/>
-                            <constraint firstItem="ItA-4C-FfP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7Ha-Mt-JOw"/>
+                            <constraint firstItem="f38-4V-fJv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Ha-Mt-JOw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f38-4V-fJv" secondAttribute="trailing" id="EsR-Ii-eA9"/>
+                            <constraint firstItem="ItA-4C-FfP" firstAttribute="top" secondItem="f38-4V-fJv" secondAttribute="bottom" constant="15" id="KIG-2f-qcj"/>
                             <constraint firstItem="ItA-4C-FfP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Q4z-Ia-BCJ"/>
-                            <constraint firstItem="ItA-4C-FfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iEK-DT-jEf"/>
+                            <constraint firstItem="f38-4V-fJv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fyh-xi-eBr"/>
+                            <constraint firstItem="ItA-4C-FfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="iEK-DT-jEf"/>
+                            <constraint firstItem="f38-4V-fJv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="laT-f6-Kgi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
