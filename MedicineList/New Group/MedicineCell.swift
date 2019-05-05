@@ -24,8 +24,8 @@ class MedicineCell: UITableViewCell {
       //medGroup.text = String(medicine!.medicine_group)
       medName?.text = medicine?.medicine_name
       medATC?.text = medicine?.atc
-      print(medicine?.medicine_name as Any)
-      print(medicine?.atc as Any)
+      //print(medicine?.medicine_name as Any)
+      //print(medicine?.atc as Any)
       if medicine?.atc == "G03" {
         medName?.textColor = UIColor.red
       } else {
