@@ -16,11 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    self.tableView.delegate = self
-    self.tableView.dataSource = self
-    self.tableView.reloadData()
-    
-    
+
     let url = URL(string: "https://connect.popit.io/download.php?filetype=medlist") 
     
     let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -31,24 +27,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       
       let listWrapper = try! JSONDecoder().decode(Data.self, from: data)
       self.medList = listWrapper.medicines
-      print(self.medList[0])
+      DispatchQueue.main.async {
+   
+        self.tableView.reloadData()
+      }
+
       print(self.medList.count)
       }
     task.resume()
- 
+    self.tableView.delegate = self
+    self.tableView.dataSource = self 
   }
   
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return medList.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MedicineCell", for: indexPath)as! MedicineCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "MedicineCell", for: indexPath) as? MedicineCell else {return UITableViewCell()}
     let medicineForRow = self.medList[indexPath.row]
     cell.medicine = medicineForRow
+    cell.medName?.text = medicineForRow.medicine_name
+    cell.medATC?.text = medicineForRow.atc
     return cell
   }
   

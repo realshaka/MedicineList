@@ -18,6 +18,16 @@ struct Medicine : Codable {
 	let hormonal_pills : Int?
 	let placebo_pills : Int?
 
+  /**init(medicine_name : String, total_pills_in_sheet : Int, medicine_group : Int, atc : String, medicine_country : String,safe_margin : Int, pill_type : String, hormonal_pills : Int, placebo_pills : Int) {
+    self.medicine_name = medicine_name
+    self.total_pills_in_sheet = total_pills_in_sheet
+    self.medicine_group = medicine_group
+    self.atc = atc
+    self.medicine_country = medicine_country
+    self.safe_margin = safe_margin
+    self.pill_type = p
+  }
+   }**/
 	enum CodingKeys: String, CodingKey {
 
 		case medicine_name = "medicine_name"
@@ -43,5 +53,6 @@ struct Medicine : Codable {
 		hormonal_pills = try values.decodeIfPresent(Int.self, forKey: .hormonal_pills)
 		placebo_pills = try values.decodeIfPresent(Int.self, forKey: .placebo_pills)
 	}
-
 }
+
+
