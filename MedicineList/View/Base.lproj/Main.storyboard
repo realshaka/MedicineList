@@ -49,7 +49,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="75Y-8V-mdY"/>
                                                                         <constraint firstAttribute="width" constant="60" id="Jbi-6b-S49"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -79,7 +79,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="60" id="egF-Zs-uTc"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -110,7 +110,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="60" id="nSq-JH-kiE"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
