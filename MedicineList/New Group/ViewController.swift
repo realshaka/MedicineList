@@ -96,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if currentMedList.count == 0 || currentMedList.isEmpty {
       view.addSubview(noMedView)
+      self.noMedView.alpha = 0
       self.hideLoadingView()
       return tableView.dequeueReusableCell(withIdentifier: "noMedCell")!
       
@@ -104,6 +105,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       let medicineForRow = self.currentMedList[indexPath.row]
       cell.medicine = medicineForRow
       cell.medGroup.text = self.groupList[0]["\(medicineForRow.medicine_group!)"]
+      self.noMedView.alpha = 0
       self.hideLoadingView()
       return cell
       
